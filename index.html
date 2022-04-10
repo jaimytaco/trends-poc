@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trends POC</title>
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+
+<body>
+    <main>
+        <section class="s-search">
+            <form>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z"
+                        stroke="#D0D1D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M21 21L15.8 15.8" stroke="#D0D1D2" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <input type="text">
+            </form>
+        </section>
+        <section class="s-linear-chart">
+            <h3>Total Searches</h3>
+            <div class="chart linear-chart is-loading">
+                <div id="linear-chart"></div>
+            </div>
+        </section>
+        <section class="s-related">
+            <h3>Related Searches</h3>
+            <ul class="related chart is-loading">
+                <li>
+                    <a href="">
+                        Kanye West
+                        <span>200 searches</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Kanye West
+                        <span>200 searches</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Kanye West
+                        <span>200 searches</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Kanye West
+                        <span>200 searches</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Kanye West
+                        <span>200 searches</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Kanye West
+                        <span>200 searches</span>
+                    </a>
+                </li><li>
+                    <a href="">
+                        Kanye West
+                        <span>200 searches</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Kanye West
+                        <span>200 searches</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Kanye West
+                        <span>200 searches</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <section class="s-country-chart">
+            <h3>Trending Countries</h3>
+            <div class="chart country-chart is-loading">
+                <div id="country-chart"></div>
+            </div>
+        </section>
+    </main>
+
+    <script defer type="module" src="/src/scripts/main.ts"></script>
+</body>
+
+</html>
