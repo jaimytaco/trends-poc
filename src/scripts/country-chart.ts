@@ -19,43 +19,24 @@ export function getCountryChart(id: string){
 
     const polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
         geoJSON: am5geodata_worldLow,
-        exclude: ['AQ']
+        exclude: ['AQ'],
+        // include: ['FR'],
+        fill: am5.color('#D9D9D9'),
+        stroke: am5.color('#2C2C2E')
     }))
 
-    polygonSeries.mapPolygons.template.setAll({
-        tooltipText: '{name}',
-        toggleKey: 'active',
-        interactive: true
-    })
-    
-    polygonSeries.mapPolygons.template.states.create('hover', {
-        fill: root.interfaceColors.get('primaryButtonHover')
-    })
-    
-    polygonSeries.mapPolygons.template.states.create('active', {
-        fill: root.interfaceColors.get('primaryButtonHover')
-    })
-        
-    const polygonSeriesUS = chart.series.push(am5map.MapPolygonSeries.new(root, {
-        geoJSON: am5geodata_usaLow
+    const polygonHighlightedSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
+        geoJSON: am5geodata_worldLow,
+        exclude: ['AQ'],
+        include: ['FR', 'US', 'PE'],
+        fill: am5.color('#00C26C'),
+        stroke: am5.color('#2C2C2E')
     }))
-    
-    polygonSeriesUS.mapPolygons.template.setAll({
+
+    polygonHighlightedSeries.mapPolygons.template.setAll({
         tooltipText: '{name}',
         toggleKey: 'active',
-        interactive: true
-    })
-    
-    const colors = am5.ColorSet.new(root, {})
-    
-    polygonSeriesUS.mapPolygons.template.set('fill', colors.getIndex(3))
-    
-    polygonSeriesUS.mapPolygons.template.states.create('hover', {
-        fill: root.interfaceColors.get('primaryButtonHover')
-    })
-    
-    polygonSeriesUS.mapPolygons.template.states.create('active', {
-        fill: root.interfaceColors.get('primaryButtonHover')
+        interactive: true,
     })
             
     chart.chartContainer.get('background').events.on('click', function () {

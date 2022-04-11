@@ -69,7 +69,8 @@ export function getLinearChart(id: string) {
         valueYField: 'value',
         valueXField: 'date',
         tooltip: am5.Tooltip.new(root, {
-            labelText: 'Popularidad {valueY}'
+            // labelText: 'Popularidad {valueY}'
+            labelText: "Popularity\n[bold]{valueY}[/]\nMay 10th, 2021"
         })
     }))
 
