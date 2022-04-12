@@ -17,7 +17,6 @@ export function getCountryChart(id: string){
         panX: 'none',
         panY: 'none',
         pinchZoom: false,
-
         projection: am5map.geoMercator()
     }))
 

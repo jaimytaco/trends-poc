@@ -9,13 +9,7 @@ export function getLinearChart(id: string) {
         am5themes_Animated.new(root)
     ])
 
-    const chart = root.container.children.push(am5xy.XYChart.new(root, {
-        panX: true,
-        panY: true,
-        wheelX: 'panX',
-        wheelY: 'zoomX',
-        pinchZoomX: true
-    }))
+    const chart = root.container.children.push(am5xy.XYChart.new(root, {}))
 
     const cursor = chart.set('cursor', am5xy.XYCursor.new(root, {
         behavior: 'none'
