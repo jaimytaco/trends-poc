@@ -12,15 +12,18 @@ export function getCountryChart(id: string){
     ])
 
     const chart = root.container.children.push(am5map.MapChart.new(root, {
-        panX: 'translateX',
-        panY: 'translateY',
+        draggable: false,
+        maxZoomLevel: 1,
+        panX: 'none',
+        panY: 'none',
+        pinchZoom: false,
+
         projection: am5map.geoMercator()
     }))
 
     const polygonSeries = chart.series.push(am5map.MapPolygonSeries.new(root, {
         geoJSON: am5geodata_worldLow,
         exclude: ['AQ'],
-        // include: ['FR'],
         fill: am5.color('#D9D9D9'),
         stroke: am5.color('#2C2C2E')
     }))

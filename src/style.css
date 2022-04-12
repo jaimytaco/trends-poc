@@ -156,12 +156,9 @@ ul.related li a span{
         width: 360px;
     }
 
-    .s-related{
-        flex: 1;
-    }
-
+    .s-related,
     .s-country-chart{
-        flex: 2;
+        flex: 1;
     }
 
     .chart{
