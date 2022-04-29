@@ -17,93 +17,49 @@
 <body>
     <main>
         <section class="s-search">
-            <form>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z"
-                        stroke="#D0D1D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M21 21L15.8 15.8" stroke="#D0D1D2" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
+            <form id="search-form">
+                <picture>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M10.5 18C14.6421 18 18 14.6421 18 10.5C18 6.35786 14.6421 3 10.5 3C6.35786 3 3 6.35786 3 10.5C3 14.6421 6.35786 18 10.5 18Z"
+                            stroke="#D0D1D2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M21 21L15.8 15.8" stroke="#D0D1D2" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </picture>
                 <input type="text">
             </form>
         </section>
         <section class="s-linear-chart">
             <h3>Total Searches</h3>
-            <div class="chart linear-chart is-loading">
+            <div id="linear-chart-wr" class="chart linear-chart">
                 <div id="linear-chart"></div>
             </div>
-            <!-- <div class="chart linear-chart is-loading">
-                <canvas data-chart-data="13,28,19,24,43,49,40,35,42,46" height="90" id="liteLineChartV2" width="300"></canvas>
-            </div> -->
         </section>
         <section class="s-related">
             <h3>Related Searches</h3>
-            <ul class="related chart is-loading">
-                <li>
-                    <a href="">
-                        Kanye West
-                        <span>200 searches</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Kanye West
-                        <span>200 searches</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Kanye West
-                        <span>200 searches</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Kanye West
-                        <span>200 searches</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Kanye West
-                        <span>200 searches</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Kanye West
-                        <span>200 searches</span>
-                    </a>
-                </li><li>
-                    <a href="">
-                        Kanye West
-                        <span>200 searches</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Kanye West
-                        <span>200 searches</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        Kanye West
-                        <span>200 searches</span>
-                    </a>
-                </li>
-            </ul>
+            <ul id="related-chart" class="related chart"></ul>
         </section>
         <section class="s-country-chart">
             <h3>Trending Countries</h3>
-            <div class="chart country-chart is-loading">
+            <div id="country-chart-wr" class="chart country-chart">
                 <div id="country-chart"></div>
             </div>
         </section>
     </main>
 
-    <script defer type="module" src="/src/scripts/main.ts"></script>
+    <div id="error-modal" class="modal">
+        <picture>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00C26C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-alert-triangle"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+        </picture>
+        <p>Something went wrong!</p>
+        <div class="m-actions">
+            <button class="btn btn-primary" data-modal-close>Retry</button>
+            <!-- <button class="btn btn-secondary" data-modal-close>Decline</button> -->
+        </div>
+    </div>
+
+    <script defer type="module" src="/src/scripts/main.js"></script>
 </body>
 
 </html>
